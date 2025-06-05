@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: fortune-server
+    env: python
+    buildCommand: ""
+    startCommand: gunicorn fortune_server:app
+    region: oregon
+    plan: free
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.10
